@@ -41,3 +41,6 @@ ENV PYTHON_DEFAULT_VENV=comfyui
 
 # Keep init.sh as-is and place additional logic in /opt/ai-dock/bin/preflight.d
 CMD ["init.sh"]
+
+RUN git clone https://github.com /opt/ComfyUI/custom_nodes/comfyui-art-venture
+RUN pip install --no-cache-dir -r /opt/ComfyUI/custom_nodes/comfyui-art-venture/requirements.txt
